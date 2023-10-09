@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderservice #default dns name
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: orderservice
+    spec:
+      containers:
+      - name: orderservice
+        image: localhost:5000/orderservice:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: http://*:80
+  selector:
+    matchLabels:
+      app: orderservice
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: orderservice
+spec:  
+  ports:
+  - port: 80
+  type: ClusterIP
+  selector:
+    app: orderservice

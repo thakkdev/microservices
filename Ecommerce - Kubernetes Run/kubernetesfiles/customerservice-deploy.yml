@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customerservice #default dns name
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: customerservice
+    spec:
+      containers:
+      - name: customerservice
+        image: localhost:5000/customerservice:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: http://*:80
+  selector:
+    matchLabels:
+      app: customerservice
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: customerservice
+spec:
+  ports:
+  - port: 80
+  type: LoadBalancer
+  selector:
+    app: customerservice
