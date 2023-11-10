@@ -6,12 +6,9 @@
 
 (3) In Docker Desktop deploy with following options
 
-    (a) [Ecommerce - Docker Run]("Ecommerce - Docker Run"/README.md)
+* [Ecommerce - Docker Run](https://github.com/thakkdev/microservices/blob/main/Ecommerce%20-%20Docker%20Run/README.md)
 
-    (b) [link text](directory/article-name.md)
+* [Ecommerce - Kubernetes Run](https://github.com/thakkdev/microservices/blob/main/Ecommerce%20-%20Kubernetes%20Run/README.md)
 
-    (c) Ecommerce - Istio Run
-    <a href="https://learn.microsoft.com/en-us/azure/virtual-network/ddos-protection-overview">Azure DDOS Protection Standard</a>
-
-
+* [Ecommerce - Istio Run](https://github.com/thakkdev/microservices/blob/main/Ecommerce%20-%20Istio%20Run/README.md) 
 
