@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productservice #default dns name
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: productservice
+    spec:
+      containers:
+      - name: productservice
+        image: localhost:5000/productservice:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: http://*:80
+  selector:
+    matchLabels:
+      app: productservice
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: productservice
+spec:  
+  ports:
+  - port: 80
+  type: ClusterIP
+  selector:
+    app: productservice

@@ -1,0 +1,41 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: searchservice
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: searchservice
+    spec:
+      containers:
+      - name: searchservice
+        image: localhost:5000/searchservice:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_URLS
+          value: http://*:80
+        - name: CustomersUrl
+          value: http://customerservice
+        - name: ProductsUrl
+          value: http://productservice
+        - name: OrdersUrl
+          value: http://orderservice
+  selector:
+    matchLabels:
+      app: searchservice
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: searchservice
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+  selector:
+    app: searchservice
