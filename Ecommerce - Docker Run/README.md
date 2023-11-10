@@ -1,8 +1,6 @@
 Ecommerce Docker Run
 
-![A diagram of a service Description automatically
-generated](media/image1.png){width="6.414583333333334in"
-height="2.2729166666666667in"}
+![Image](image1.png)
 
 (1) Flow
 
@@ -20,30 +18,27 @@ height="2.2729166666666667in"}
 
 (2) To create docker image
 
-  -----------------------------------------------------------------------
+
   \> docker build -t orderservice .
-  -----------------------------------------------------------------------
+
   \> docker build -t customerservice .
 
   \> docker build -t productservice .
 
   \> docker build -t searchservice .
-  -----------------------------------------------------------------------
+
 
 (3) List all docker images
 
-  -----------------------------------------------------------------------
   \> docker images
-  -----------------------------------------------------------------------
 
-  -----------------------------------------------------------------------
 
 (4) Run application in docker container
 
-  -----------------------------------------------------------------------
+
   \> docker run -it \--rm -p 3000:80 \--name customerservicecontainer
   customerservice
-  -----------------------------------------------------------------------
+
   \> docker run -it \--rm -p 3001:80 \--name productservicecontainer
   productservice
 
@@ -52,4 +47,4 @@ height="2.2729166666666667in"}
 
   \> docker run -it \--rm -p 3003:80 \--name searchservicecontainer
   searchservice
-  -----------------------------------------------------------------------
+
