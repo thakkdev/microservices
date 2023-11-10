@@ -1,8 +1,8 @@
-Ecommerce Docker Run
+**Ecommerce Docker Run**
 
 ![Image](image1.png)
 
-(1) Flow
+**(1) Flow**
 
 > SearchService calls CustomerService, ProductService and OrderService
 >
@@ -12,12 +12,11 @@ Ecommerce Docker Run
 >
 > {
 >
->   \"customerId\": 1
+> \"customerId\": 1
 >
 > }
 
-(2) To create docker image
-
+**(2) To create docker image**
 
   \> docker build -t orderservice .
 
@@ -27,14 +26,11 @@ Ecommerce Docker Run
 
   \> docker build -t searchservice .
 
-
-(3) List all docker images
+**(3) List all docker images**
 
   \> docker images
 
-
-(4) Run application in docker container
-
+**(4) Run application in docker container**
 
   \> docker run -it \--rm -p 3000:80 \--name customerservicecontainer
   customerservice
@@ -47,4 +43,3 @@ Ecommerce Docker Run
 
   \> docker run -it \--rm -p 3003:80 \--name searchservicecontainer
   searchservice
-
