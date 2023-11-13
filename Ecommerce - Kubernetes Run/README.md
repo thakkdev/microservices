@@ -39,6 +39,7 @@
 
 **(4) Images in DockerHub or Registry:2**
 Manifest files pull images for either Docker Hub or from "Registry:2"
+
 <br/>
 
 **(5) Option with Docker Hub**
@@ -101,7 +102,9 @@ Postforward the service
 <i>**or** update port, container port, APSNET URLs values in manifest file for that service. Value will be 30001 and above</i>
 
 
+
 Delete deployments and service endpoints
+
 > kubectl get deployments
   kubectl delete deployment {deployment name}
   kubectl get services -o wide

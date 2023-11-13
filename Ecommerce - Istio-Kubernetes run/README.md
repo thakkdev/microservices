@@ -39,6 +39,7 @@
 
 **(4) Images in DockerHub or Registry:2**
 Manifest files pull images for either Docker Hub or from "Registry:2"
+
 <br/>
 
 **(5) Option with Docker Hub**
@@ -119,6 +120,7 @@ Scale to 0
 
 
 Delete deployments and service endpoints
+
 > kubectl get deployments
   kubectl delete deployment {deployment name}
   kubectl get services -o wide
