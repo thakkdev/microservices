@@ -46,9 +46,9 @@ Manifest files pull images for either Docker Hub or from "Registry:2"
 Tag docker for pushing to docker hub (should match userid in hub)
 
 > docker tag productservice {userid}/productservice
-docker tag orderservice {userid}/orderservice
-docker tag searchservice {userid}/searchservice
-docker tag cusrtomerservice {userid}/customerservice
+  docker tag orderservice {userid}/orderservice
+  ocker tag searchservice {userid}/searchservice
+  docker tag cusrtomerservice {userid}/customerservice
 
 > docker push {userid}/productservice
   docker push {userid}/orderservice
@@ -75,7 +75,7 @@ tag and push images to registry
   docker push localhost:5000/orderservice
 
 > docker tag searchservice localhost:5000/searchservice
-> docker push localhost:5000/searchservice
+  docker push localhost:5000/searchservice
 
 <br/>
 
@@ -93,9 +93,9 @@ tag and push images to registry
 **(9) Deploy to kubernetes**
 
 > kubectl apply -f customerservice-deploy.yml
-kubectl apply -f productservice-deploy.yml
-kubectl apply -f orderservice-deploy.yml
-kubectl apply -f searchservice-deploy.yml
+  kubectl apply -f productservice-deploy.yml
+  kubectl apply -f orderservice-deploy.yml
+  kubectl apply -f searchservice-deploy.yml
 
 <br/>
 
@@ -121,7 +121,7 @@ Scale to 0
 
 Delete deployments and service endpoints
 
-> kubectl get deployments
-  kubectl delete deployment {deployment name}
-  kubectl get services -o wide
-  kubectl delete service {servicename}
+> kubectl get deployments </br>
+  kubectl delete deployment {deployment name} </br>
+  kubectl get services -o wide </br>
+  kubectl delete service {servicename} </br>
