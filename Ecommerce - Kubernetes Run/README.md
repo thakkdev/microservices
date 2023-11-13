@@ -45,15 +45,15 @@ Manifest files pull images for either Docker Hub or from "Registry:2"
 **(5) Option with Docker Hub**
 Tag docker for pushing to docker hub (should match userid in hub)
 
-> docker tag productservice {userid}/productservice
-  docker tag orderservice {userid}/orderservice
-  docker tag searchservice {userid}/searchservice
-  docker tag cusrtomerservice {userid}/customerservice
+> docker tag productservice {userid}/productservice </br>
+  docker tag orderservice {userid}/orderservice </br>
+  docker tag searchservice {userid}/searchservice </br>
+  docker tag cusrtomerservice {userid}/customerservice </br>
 
-> docker push {userid}/productservice
-  docker push {userid}/orderservice
-  docker push {userid}/searchservice
-  docker push {userid}/customerservice
+> docker push {userid}/productservice </br>
+  docker push {userid}/orderservice </br>
+  docker push {userid}/searchservice </br>
+  docker push {userid}/customerservice </br>
 
 <br/>
 
@@ -65,26 +65,26 @@ create a registry
 > docker run -d -p 5000:5000 --restart=always --name registry registry:2
 
 tag and push images to registry
-> docker tag productservice localhost:5000/productservice
+> docker tag productservice localhost:5000/productservice </br>
   docker push localhost:5000/productservice
 
-> docker tag customerservice localhost:5000/customerservice
+> docker tag customerservice localhost:5000/customerservice </br>
   docker push localhost:5000/customerservice
 
-> docker tag orderservice localhost:5000/orderservice
+> docker tag orderservice localhost:5000/orderservice </br>
   docker push localhost:5000/orderservice
 
-> docker tag searchservice localhost:5000/searchservice
+> docker tag searchservice localhost:5000/searchservice </br>
   docker push localhost:5000/searchservice
 
 <br/>
 
 **(7) Deploy to kubernetes**
 
-> kubectl apply -f customerservice-deploy.yml
-  kubectl apply -f productservice-deploy.yml
-  kubectl apply -f orderservice-deploy.yml
-  kubectl apply -f searchservice-deploy.yml
+> kubectl apply -f customerservice-deploy.yml </br>
+  kubectl apply -f productservice-deploy.yml </br>
+  kubectl apply -f orderservice-deploy.yml </br>
+  kubectl apply -f searchservice-deploy.yml </br>
 
 <br/>
 
