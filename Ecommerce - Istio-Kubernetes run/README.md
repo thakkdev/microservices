@@ -117,6 +117,7 @@ To get pod details
 Scale to 0
 > kubectl scale --replicas=0 deployment/customerservice
 
+
 Delete deployments and service endpoints
 > kubectl get deployments
   kubectl delete deployment {deployment name}

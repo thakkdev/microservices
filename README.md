@@ -10,5 +10,5 @@
 
 * [Ecommerce - Kubernetes Run](https://github.com/thakkdev/microservices/blob/main/Ecommerce%20-%20Kubernetes%20Run/README.md)
 
-* [Ecommerce - Istio Run](https://github.com/thakkdev/microservices/blob/main/Ecommerce%20-%20Istio%20Run/README.md) 
+* [Ecommerce - Istio Run](https://github.com/thakkdev/microservices/blob/main/Ecommerce%20-%20Istio-Kubernetes%20Run/README.md) 
 

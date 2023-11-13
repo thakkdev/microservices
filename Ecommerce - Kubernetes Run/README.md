@@ -98,7 +98,8 @@ Scale to 0
 Postforward the service 
 > kubectl port-forward customerservice-{pod} 4000:80
 </br>
-<i>**or** update port, container port, APSNET URLs values in manifest file for that service. Value shuld be 30001 and above</i>
+<i>**or** update port, container port, APSNET URLs values in manifest file for that service. Value will be 30001 and above</i>
+
 
 Delete deployments and service endpoints
 > kubectl get deployments
