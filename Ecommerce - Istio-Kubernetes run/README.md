@@ -105,7 +105,7 @@ tag and push images to registry
   -check for IP </br>
   kubectl get svc istio-ingressgateway -n istio-system
 
-There are two types of gateways (for ingress). Istio API Gateway and Kibernetes Gateway. Istio will default to kubernetes gateway going forward.
+There are two types of gateways (for ingress). Istio API Gateway and Kubernetes Gateway. Istio will default to kubernetes gateway going forward.
 
 
   <br/>
